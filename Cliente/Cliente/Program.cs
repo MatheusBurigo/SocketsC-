@@ -6,22 +6,24 @@ namespace Cliente
 {
     public class program 
     {
-
+        // informando tipo de socket que será criado
         private static Socket _clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         static void Main(string[] args)
         {
             Console.Title = "Client";
             LoopConnect();
             SendLoop();
-;            Console.ReadLine();
+;           Console.ReadLine();
         }
 
         private static void SendLoop()
         {
             while (true)
             {
+                // Laço de repetição para envio do pedido dos clientes
                 Console.Write("Enter a request: ");
                 var req = Console.ReadLine();
+                // Armazena as respostas em um array e envia os dados para o servidor
                 byte[] buffer = Encoding.ASCII.GetBytes(req);
                 _clientSocket.Send(buffer);
 
