@@ -30,7 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCriarCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -50,27 +50,29 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome do Cliente";
             // 
-            // button1
+            // btnCriarCliente
             // 
-            this.button1.Location = new System.Drawing.Point(24, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 99);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Criar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCriarCliente.Location = new System.Drawing.Point(24, 123);
+            this.btnCriarCliente.Name = "btnCriarCliente";
+            this.btnCriarCliente.Size = new System.Drawing.Size(146, 99);
+            this.btnCriarCliente.TabIndex = 2;
+            this.btnCriarCliente.Text = "Criar";
+            this.btnCriarCliente.UseVisualStyleBackColor = true;
+            this.btnCriarCliente.Click += new System.EventHandler(this.btnCriarCliente_Click);
             // 
             // AdicionarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 256);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCriarCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AdicionarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdicionarCliente";
+            this.Load += new System.EventHandler(this.AdicionarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,6 +82,6 @@
 
         private TextBox textBox1;
         private Label label1;
-        private Button button1;
+        private Button btnCriarCliente;
     }
 }
