@@ -100,7 +100,7 @@
             this.label1.Size = new System.Drawing.Size(123, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mensagens Recebidas";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+      
             // 
             // dataGridView1
             // 
@@ -128,7 +128,7 @@
             this.label2.Size = new System.Drawing.Size(70, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Conectados";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+      
             // 
             // label3
             // 
@@ -138,7 +138,7 @@
             this.label3.Size = new System.Drawing.Size(115, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "Envio de Mensagens";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+         
             // 
             // textBox1
             // 
