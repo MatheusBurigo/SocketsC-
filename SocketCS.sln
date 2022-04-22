@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "MultiServer\Server.csproj", "{841DAD7C-427C-4F5A-9E39-4EE71EFE81D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "MultiClient\Client.csproj", "{E73DCBEE-3F3A-4185-A6B6-57DAB5412D12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tela", "Tela\Tela.csproj", "{F8A710F1-0849-4E0D-B4CE-5605FC8562CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{841DAD7C-427C-4F5A-9E39-4EE71EFE81D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841DAD7C-427C-4F5A-9E39-4EE71EFE81D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841DAD7C-427C-4F5A-9E39-4EE71EFE81D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841DAD7C-427C-4F5A-9E39-4EE71EFE81D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73DCBEE-3F3A-4185-A6B6-57DAB5412D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73DCBEE-3F3A-4185-A6B6-57DAB5412D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73DCBEE-3F3A-4185-A6B6-57DAB5412D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73DCBEE-3F3A-4185-A6B6-57DAB5412D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A710F1-0849-4E0D-B4CE-5605FC8562CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A710F1-0849-4E0D-B4CE-5605FC8562CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A710F1-0849-4E0D-B4CE-5605FC8562CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A710F1-0849-4E0D-B4CE-5605FC8562CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B2F2068-768E-480A-B7FD-B593FC21EAAF}
+	EndGlobalSection
+EndGlobal
