@@ -11,9 +11,9 @@ namespace Tela
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            var tela = new Cliente();
+            var telaCliente = new Cliente();
 
-            Application.Run(tela);
+            Application.Run(telaCliente);
         }
     }
 }
