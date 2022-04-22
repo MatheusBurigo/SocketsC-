@@ -13,5 +13,11 @@ namespace Tela
 
             telaAdiconarCliente.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Servidor tela = new Servidor();
+            tela.ShowDialog();
+        }
     }
 }
