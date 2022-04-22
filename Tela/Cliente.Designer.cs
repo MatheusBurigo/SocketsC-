@@ -30,23 +30,23 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.gridConectados = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridMensagemRecebidas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMensagem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnArquivo = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.btnAcionarCliente = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridConectados)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMensagemRecebidas)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dataGridView2);
+            this.panel1.Controls.Add(this.gridConectados);
             this.panel1.Location = new System.Drawing.Point(601, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 426);
@@ -70,33 +70,33 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Conectados";
             // 
-            // dataGridView2
+            // gridConectados
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 41);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(190, 378);
-            this.dataGridView2.TabIndex = 2;
+            this.gridConectados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridConectados.Location = new System.Drawing.Point(3, 41);
+            this.gridConectados.Name = "gridConectados";
+            this.gridConectados.RowTemplate.Height = 25;
+            this.gridConectados.Size = new System.Drawing.Size(190, 378);
+            this.gridConectados.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.gridMensagemRecebidas);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(575, 288);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // gridMensagemRecebidas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(565, 240);
-            this.dataGridView1.TabIndex = 1;
+            this.gridMensagemRecebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridMensagemRecebidas.Location = new System.Drawing.Point(3, 41);
+            this.gridMensagemRecebidas.Name = "gridMensagemRecebidas";
+            this.gridMensagemRecebidas.RowTemplate.Height = 25;
+            this.gridMensagemRecebidas.Size = new System.Drawing.Size(565, 240);
+            this.gridMensagemRecebidas.TabIndex = 1;
             // 
             // label1
             // 
@@ -109,19 +109,19 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtMensagem);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(12, 306);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(575, 64);
             this.panel3.TabIndex = 2;
             // 
-            // textBox1
+            // txtMensagem
             // 
-            this.textBox1.Location = new System.Drawing.Point(5, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(565, 23);
-            this.textBox1.TabIndex = 4;
+            this.txtMensagem.Location = new System.Drawing.Point(5, 29);
+            this.txtMensagem.Name = "txtMensagem";
+            this.txtMensagem.Size = new System.Drawing.Size(565, 23);
+            this.txtMensagem.TabIndex = 4;
             // 
             // label3
             // 
@@ -134,51 +134,54 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnSair);
+            this.panel4.Controls.Add(this.btnArquivo);
+            this.panel4.Controls.Add(this.btnEnviar);
+            this.panel4.Controls.Add(this.btnAcionarCliente);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(12, 376);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(575, 62);
             this.panel4.TabIndex = 3;
             // 
-            // button4
+            // btnSair
             // 
-            this.button4.Location = new System.Drawing.Point(248, 28);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Sair";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSair.Location = new System.Drawing.Point(248, 28);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 9;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnArquivo
             // 
-            this.button3.Location = new System.Drawing.Point(167, 28);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Arquivo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnArquivo.Enabled = false;
+            this.btnArquivo.Location = new System.Drawing.Point(167, 28);
+            this.btnArquivo.Name = "btnArquivo";
+            this.btnArquivo.Size = new System.Drawing.Size(75, 23);
+            this.btnArquivo.TabIndex = 8;
+            this.btnArquivo.Text = "Arquivo";
+            this.btnArquivo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEnviar
             // 
-            this.button2.Location = new System.Drawing.Point(86, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Enviar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEnviar.Enabled = false;
+            this.btnEnviar.Location = new System.Drawing.Point(86, 28);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
+            this.btnEnviar.TabIndex = 7;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAcionarCliente
             // 
-            this.button1.Location = new System.Drawing.Point(5, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Conectar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAcionarCliente.Location = new System.Drawing.Point(5, 28);
+            this.btnAcionarCliente.Name = "btnAcionarCliente";
+            this.btnAcionarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnAcionarCliente.TabIndex = 6;
+            this.btnAcionarCliente.Text = "Conectar";
+            this.btnAcionarCliente.UseVisualStyleBackColor = true;
+            this.btnAcionarCliente.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -198,14 +201,16 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Cliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridConectados)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMensagemRecebidas)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -222,14 +227,14 @@
         private Panel panel4;
         private Label label1;
         private Label label2;
-        private DataGridView dataGridView2;
+        private DataGridView gridConectados;
         private Label label3;
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private DataGridView gridMensagemRecebidas;
+        private TextBox txtMensagem;
         private Label label4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnAcionarCliente;
+        private Button btnEnviar;
+        private Button btnArquivo;
+        private Button btnSair;
     }
 }

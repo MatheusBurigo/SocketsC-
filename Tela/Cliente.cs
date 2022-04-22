@@ -7,5 +7,11 @@ namespace Tela
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var telaAdiconarCliente = new AdicionarCliente();
+
+            telaAdiconarCliente.ShowDialog();
+        }
     }
 }
