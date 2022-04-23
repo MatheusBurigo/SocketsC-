@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tela
 {
-    public partial class Servidor : Form
+    public partial class ServidorFrm : Form
     {
-        public Servidor()
+        public ServidorFrm()
         {
             InitializeComponent();
         }

@@ -88,28 +88,18 @@ namespace MultiServer
             string text = Encoding.ASCII.GetString(recBuf);
             Console.WriteLine("Received Text: " + text);
 
-            if (text.ToLower() == "get time") // Client requested time
-            {
-                Console.WriteLine("Text is a get time request");
-                byte[] data = Encoding.ASCII.GetBytes(DateTime.Now.ToLongTimeString());
-                current.Send(data);
-                Console.WriteLine("Time sent to client");
-            }
-            else if (text.ToLower() == "exit") // Client wants to exit gracefully
-            {
-                // Always Shutdown before closing
-                current.Shutdown(SocketShutdown.Both);
-                current.Close();
-                clientSockets.Remove(current);
-                Console.WriteLine("Client disconnected");
-                return;
-            }
-            else
+            if (String.IsNullOrEmpty(text)) // Client requested time
             {
                 Console.WriteLine("Text is an invalid request");
                 byte[] data = Encoding.ASCII.GetBytes("Invalid request");
                 current.Send(data);
                 Console.WriteLine("Warning Sent");
+            }
+            else
+            {
+                byte[] data = Encoding.ASCII.GetBytes(text);
+                current.Send(data);
+                Console.WriteLine("Mensagem enviada");
             }
 
             current.BeginReceive(buffer, 0, BUFFER_SIZE, SocketFlags.None, ReceiveCallback, current);

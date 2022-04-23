@@ -1,6 +1,6 @@
 ﻿namespace Tela
 {
-    partial class Servidor
+    partial class ServidorFrm
     {
         /// <summary>
         /// Required designer variable.
