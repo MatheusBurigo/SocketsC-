@@ -39,9 +39,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblMensagensRecebidas = new System.Windows.Forms.Label();
             this.pnlMensagem = new System.Windows.Forms.Panel();
+            this.lblMensagemEnviadaPor = new System.Windows.Forms.Label();
             this.lblClientesParaEnviar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMensagemDe = new System.Windows.Forms.Label();
             this.txtMensagem = new System.Windows.Forms.TextBox();
             this.pnlAcoes = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
@@ -79,7 +80,7 @@
             this.lsbConectados.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lsbConectados.Size = new System.Drawing.Size(289, 538);
             this.lsbConectados.TabIndex = 17;
-            this.lsbConectados.MouseLeave += new System.EventHandler(this.lsbConectados_MouseLeave);
+            this.lsbConectados.MouseEnter += new System.EventHandler(this.lsbConectados_MouseEnter);
             // 
             // lsbMensagens
             // 
@@ -141,9 +142,10 @@
             // 
             // pnlMensagem
             // 
+            this.pnlMensagem.Controls.Add(this.lblMensagemEnviadaPor);
             this.pnlMensagem.Controls.Add(this.lblClientesParaEnviar);
             this.pnlMensagem.Controls.Add(this.label1);
-            this.pnlMensagem.Controls.Add(this.label3);
+            this.pnlMensagem.Controls.Add(this.lblMensagemDe);
             this.pnlMensagem.Controls.Add(this.txtMensagem);
             this.pnlMensagem.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlMensagem.Location = new System.Drawing.Point(0, 387);
@@ -151,11 +153,21 @@
             this.pnlMensagem.Size = new System.Drawing.Size(606, 73);
             this.pnlMensagem.TabIndex = 1;
             // 
+            // lblMensagemEnviadaPor
+            // 
+            this.lblMensagemEnviadaPor.AutoSize = true;
+            this.lblMensagemEnviadaPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblMensagemEnviadaPor.Location = new System.Drawing.Point(116, 11);
+            this.lblMensagemEnviadaPor.Name = "lblMensagemEnviadaPor";
+            this.lblMensagemEnviadaPor.Size = new System.Drawing.Size(12, 15);
+            this.lblMensagemEnviadaPor.TabIndex = 20;
+            this.lblMensagemEnviadaPor.Text = "-";
+            // 
             // lblClientesParaEnviar
             // 
             this.lblClientesParaEnviar.AutoSize = true;
             this.lblClientesParaEnviar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblClientesParaEnviar.Location = new System.Drawing.Point(178, 11);
+            this.lblClientesParaEnviar.Location = new System.Drawing.Point(327, 11);
             this.lblClientesParaEnviar.Name = "lblClientesParaEnviar";
             this.lblClientesParaEnviar.Size = new System.Drawing.Size(12, 15);
             this.lblClientesParaEnviar.TabIndex = 19;
@@ -167,23 +179,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 11);
+            this.label1.Location = new System.Drawing.Point(277, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 15);
             this.label1.TabIndex = 18;
             this.label1.Text = "Para";
             // 
-            // label3
+            // lblMensagemDe
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblMensagemDe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Mensgem:";
+            this.lblMensagemDe.AutoSize = true;
+            this.lblMensagemDe.Location = new System.Drawing.Point(12, 11);
+            this.lblMensagemDe.Name = "lblMensagemDe";
+            this.lblMensagemDe.Size = new System.Drawing.Size(79, 15);
+            this.lblMensagemDe.TabIndex = 17;
+            this.lblMensagemDe.Text = "Mensgem de:";
             // 
             // txtMensagem
             // 
@@ -302,11 +314,12 @@
         private ListBox lsbConectados;
         private Panel panel1;
         private Panel panel2;
-        private Label label3;
+        private Label lblMensagemDe;
         private ListBox lsbMensagens;
         private Label lblMensagensRecebidas;
         private BindingSource ClientesBindingSource;
         private Label label1;
         private Label lblClientesParaEnviar;
+        private Label lblMensagemEnviadaPor;
     }
 }

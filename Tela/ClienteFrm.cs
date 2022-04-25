@@ -5,7 +5,9 @@ namespace Tela
     public partial class ClienteFrm : Form
     {
 
-        public static List<Cliente> clientes = new List<Cliente>();
+        public static List<Cliente> clientesConectados = new List<Cliente>();
+        public static List<Cliente> clientes= new List<Cliente>();
+        public static Cliente? clienteAtual = null;
         public List<Cliente> clientesParaEnvio = new List<Cliente>();
 
         public ClienteFrm()
@@ -15,46 +17,67 @@ namespace Tela
 
         private void Cliente_Load(object sender, EventArgs e)
         {
-            clientes.Add(new Cliente("aaa", null));
-            clientes.Add(new Cliente("bbb", null));
+        }
 
-            ClientesBindingSource.DataSource = clientes;
+        private void AtualizarDados()
+        {
+            clientesConectados.AddRange(clientes);
+
+            clientesConectados.Remove(clienteAtual);
+
+            ClientesBindingSource.DataSource = clientesConectados;
             lsbConectados.DataSource = ClientesBindingSource;
+           
         }
 
         private void btnAcionarCliente_Click(object sender, EventArgs e)
         {
             var telaAdiconarCliente = new AdicionarClienteFrm();
-
             telaAdiconarCliente.ShowDialog();
         }
 
-        private void SelecionarClientes()
+        private void SelecionarClientesParaEnvio()
         {
             lblClientesParaEnviar.Text = "";
 
             foreach (var cliente in lsbConectados.SelectedItems)
             {
+                if (cliente == clienteAtual)
+                {
+                    continue;
+                }
+
                 lblClientesParaEnviar.Text += (lblClientesParaEnviar.Text == "" ? "" : ",") + cliente.ToString();
+
                 clientesParaEnvio.Add((Cliente)cliente);
             }
         }
 
-        private void lsbConectados_MouseLeave(object sender, EventArgs e)
+        private void lsbConectados_MouseEnter(object sender, EventArgs e)
         {
-            SelecionarClientes();
+            AtualizarDados();
 
-            if (lblClientesParaEnviar.Text == "")
+            SelecionarClientesParaEnvio();
+
+            if (clienteAtual != null)
             {
-                btnEnviar.Enabled = false;
-                btnSair.Enabled = false;
+                lblMensagemEnviadaPor.Text = clienteAtual.nomeDoCliente;
             }
             else
             {
-                btnEnviar.Enabled = true;
-                btnSair.Enabled = true;
+                lblMensagemEnviadaPor.Text = "";
             }
 
+            if (lblClientesParaEnviar.Text != "" && lblMensagemEnviadaPor.Text != "")
+            {
+                btnEnviar.Enabled = true;
+            }
+            else
+            {
+                btnEnviar.Enabled = false;
+            }
+
+      
         }
     }
 }

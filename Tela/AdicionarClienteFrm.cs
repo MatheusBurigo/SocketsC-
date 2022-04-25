@@ -27,7 +27,10 @@ namespace Tela
 
                 Cliente cliente = new Cliente(nomeDoCliente, socketDoCliente);
 
+
                 ClienteFrm.clientes.Add(cliente);
+
+                ClienteFrm.clienteAtual = cliente;            
 
                 Close();
             }       
